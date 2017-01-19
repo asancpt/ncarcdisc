@@ -1,6 +1,7 @@
 # NonCompart
 
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/NonCompart)](https://cran.r-project.org/package=NonCompart) 
+[![Rdoc](http://www.rdocumentation.org/badges/version/NonCompart)](http://www.rdocumentation.org/packages/NonCompart)
 [![CRAN Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/NonCompart)](https://cran.r-project.org/package=NonCompart) 
 [![CRAN Monthly Downloads](http://cranlogs.r-pkg.org/badges/NonCompart)](https://cran.r-project.org/package=NonCompart) 
 [![Travis-CI Build Status](https://travis-ci.org/asancpt/NonCompart.svg?branch=master)](https://travis-ci.org/asancpt/NonCompart) 

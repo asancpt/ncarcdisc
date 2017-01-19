@@ -19,8 +19,7 @@ Imports: dplyr, Hmisc, lubridate, measurements
 License: GPL-3
 NeedsCompilation: no
 LazyLoad: yes
-Repository: CRAN
-URL: https://cran.r-project.org/package=NonCompart, https://github.com/asancpt/NonCompart
+URL: https://github.com/asancpt/NonCompart
 BugReports: https://github.com/asancpt/NonCompart/issues
 Packaged: 2017-01-01 07:07:58 UTC; K
 Date/Publication: 2017-01-01 10:08:58
