@@ -12,7 +12,6 @@
 #' @importFrom Hmisc sasxport.get
 #' @importFrom measurements conv_unit
 #' @importFrom lubridate ymd_hm
-#' @import NonCompart
 #' @import dplyr
 #' @export
 #' @return List of output data of noncompartmental analysis
