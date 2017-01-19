@@ -15,12 +15,13 @@ Depends: R (>= 2.0.0)
 Author: Kyun-Seop Bae
 Maintainer: Kyun-Seop Bae <k@acr.kr>
 Copyright: 2017, Kyun-Seop Bae
-Imports: NonCompart (>= 0.2.6), dplyr (>= 0.5.0), Hmisc (>= 4.0-2), lubridate (>= 1.6.0), measurements (>= 1.1.0)
+Imports: dplyr, Hmisc, lubridate, measurements
 License: GPL-3
 NeedsCompilation: no
 LazyLoad: yes
 Repository: CRAN
-URL: https://cran.r-project.org/package=NonCompart
+URL: https://cran.r-project.org/package=NonCompart, https://github.com/asancpt/NonCompart
+BugReports: https://github.com/asancpt/NonCompart/issues
 Packaged: 2017-01-01 07:07:58 UTC; K
 Date/Publication: 2017-01-01 10:08:58
 RoxygenNote: 5.0.1
