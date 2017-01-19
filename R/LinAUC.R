@@ -1,3 +1,4 @@
+#' @export
 LinAUC <-
 function(x, y) # Method="Linear"
 {

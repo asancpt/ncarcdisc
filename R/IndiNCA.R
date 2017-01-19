@@ -1,10 +1,11 @@
+#' @export
 IndiNCA <-
 function(x, y, Dose=0, Method="Linear", AdmMode="Extravascular", TimeInfusion=0, RetNames, Report="Table", iAUC)
 {
   n = length(x)
   if (n != length(y) | !is.numeric(x) | !is.numeric(y) | !is.numeric(Dose) | !is.numeric(TimeInfusion) | !is.character(AdmMode) | !is.character(Method)) stop("Bad Input!")
   if (AdmMode == "Infusion" & !(TimeInfusion > 0)) stop("Infusion mode should have TimeInfusion larger than 0!")
-  
+
   x0 = x[1:max(which(y>0))] # Till Non-zero concentration. i.e. removing trailing zeros
   y0 = y[1:max(which(y>0))] # Till Non-zero concentration. i.e. removing trailing zeros
   x0s = x0[y0 != 0]
@@ -14,7 +15,7 @@ function(x, y, Dose=0, Method="Linear", AdmMode="Extravascular", TimeInfusion=0,
   RetNames0 = RptCfg[RptCfg[,colOrd] > 0,c("PPTESTCD",colOrd)]
   RetNames = RetNames0[order(RetNames0[,colOrd]),"PPTESTCD"] ;
 
-  if (!(Dose > 0)) RetNames = setdiff(RetNames, c("CMAXD", "AUCIFOD", "AUCIFPD")) 
+  if (!(Dose > 0)) RetNames = setdiff(RetNames, c("CMAXD", "AUCIFOD", "AUCIFPD"))
 
   if (!missing(iAUC)) {
     if (nrow(iAUC) > 0) {
@@ -120,20 +121,20 @@ function(x, y, Dose=0, Method="Linear", AdmMode="Extravascular", TimeInfusion=0,
   if (Report == "Table") {
     Result = Res[RetNames]
   } else if (Report == "Text") {
-    
+
  # Begin Making Summary Table
     iL = which(xa0==Res["LAMZLL"])
     iU = which(xa0==Res["LAMZUL"])
     xr0 = xa0[iL:iU]
-    yr0 = ya0[iL:iU] 
+    yr0 = ya0[iL:iU]
     ypr = exp(Res["b0"] - Res["LAMZ"]*xr0)
     yre = yr0 - ypr
- # End Making Summary Table  
+ # End Making Summary Table
     DateTime = strsplit(as.character(Sys.time())," ")[[1]]
 
     Result = vector()
     cLineNo = 1
-    Result[cLineNo] = paste("                        NONCOMPARTMENTAL ANALYSIS REPORT") ; cLineNo = cLineNo + 1 
+    Result[cLineNo] = paste("                        NONCOMPARTMENTAL ANALYSIS REPORT") ; cLineNo = cLineNo + 1
     Result[cLineNo] = paste0("                       Package version ", packageVersion("NonCompart"), " (", packageDescription("NonCompart")$Date, ")") ; cLineNo = cLineNo + 1
     Result[cLineNo] = paste("                         ", version$version.string) ; cLineNo = cLineNo + 1
     Result[cLineNo] = "" ; cLineNo = cLineNo + 1
@@ -165,7 +166,7 @@ function(x, y, Dose=0, Method="Linear", AdmMode="Extravascular", TimeInfusion=0,
     Result[cLineNo] = "-------------------------" ; cLineNo = cLineNo + 1
     Result[cLineNo] = "      Time         Conc.      Pred.   Residual       AUC       AUMC      Weight" ; cLineNo = cLineNo + 1
     Result[cLineNo] = "-------------------------------------------------------------------------------" ; cLineNo = cLineNo + 1
-    for (i in 1:length(xa0)) {   
+    for (i in 1:length(xa0)) {
       Str = sprintf("%11.4f", Round(xa0[i],4))
       if (C0Imputed & i == 1) { Str = paste(Str, "+") }
       else if (i >= iL & i <= iU) { Str = paste(Str, "*") }
@@ -182,7 +183,7 @@ function(x, y, Dose=0, Method="Linear", AdmMode="Extravascular", TimeInfusion=0,
       Result[cLineNo] = Str ; cLineNo = cLineNo + 1
     }
     Result[cLineNo] = "" ; cLineNo = cLineNo + 1
-    if (C0Imputed) {   
+    if (C0Imputed) {
       Result[cLineNo] = "+: Back extrapolated concentration" ; cLineNo = cLineNo + 1
     }
     Result[cLineNo] = "*: Used for the calculation of Lambda z." ; cLineNo = cLineNo + 1
@@ -193,8 +194,8 @@ function(x, y, Dose=0, Method="Linear", AdmMode="Extravascular", TimeInfusion=0,
     for (i in 1:length(RetNames)) {
       SYNO = RptCfg[RptCfg$PPTESTCD==RetNames[i],"SYNONYM"]
       if (RetNames[i] == "LAMZNPT") {
-        Result[cLineNo] = paste(sprintf("%-10s", RetNames[i]), sprintf("%-40s", SYNO), sprintf("%8d", Round(Res[RetNames[i]], 4))) ; cLineNo = cLineNo + 1    
-      } else {  
+        Result[cLineNo] = paste(sprintf("%-10s", RetNames[i]), sprintf("%-40s", SYNO), sprintf("%8d", Round(Res[RetNames[i]], 4))) ; cLineNo = cLineNo + 1
+      } else {
         Result[cLineNo] = paste(sprintf("%-10s", RetNames[i]), sprintf("%-40s", SYNO), sprintf("%13.4f", Round(Res[RetNames[i]], 4))) ; cLineNo = cLineNo + 1
       }
     }

@@ -1,3 +1,4 @@
+#' @export
 Interpol <-
 function(x, y, xnew, Slope, b0, Method="Linear")
 {

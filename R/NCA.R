@@ -1,3 +1,4 @@
+#' @export
 NCA <-
 function(Data, colSubj, colTime, colConc, colTrt, Method="Linear", Dose=0, AdmMode="Extravascular", TimeInfusion=0, Report="Table", iAUC)
 {
@@ -35,7 +36,7 @@ function(Data, colSubj, colTime, colConc, colTrt, Method="Linear", Dose=0, AdmMo
         if (length(Dose) > 1) {
           cDose = Dose[i]
         } else {
-          cDose = Dose 
+          cDose = Dose
         }
         if (length(TimeInfusion) > 1) {
           cTimeInfusion = TimeInfusion[i]

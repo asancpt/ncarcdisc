@@ -1,3 +1,4 @@
+#' @export
 BestSlope <-
 function(x, y, AdmMode="Extravascular")
 {

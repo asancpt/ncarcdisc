@@ -1,3 +1,4 @@
+#' @export
 IntAUC <-
 function(x, y, t1, t2, Res, Method="Linear")
 {

@@ -1,3 +1,4 @@
+#' @export
 LogAUC <-
 function(x, y) # Method="Log" means Linear-Up Log-Down
 {

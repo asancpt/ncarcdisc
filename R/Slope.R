@@ -1,3 +1,4 @@
+#' @export
 Slope <-
 function(x, y)
 {
