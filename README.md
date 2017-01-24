@@ -6,7 +6,7 @@
 [![CRAN Monthly Downloads](http://cranlogs.r-pkg.org/badges/ncar)](https://cran.r-project.org/package=ncar) 
 [![Travis-CI Build Status](https://travis-ci.org/asancpt/ncar.svg?branch=master)](https://travis-ci.org/asancpt/ncar) 
 
-> ncar R package (Derivative of ncar R package)
+> ncar R package (Derivative of NonCompart R package)
 
 Overview
 --------
