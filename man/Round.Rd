@@ -24,14 +24,9 @@ this \code{Round} function. This function is for the consistency with other
 software like MS-Excel, SAS.
 }
 \examples{
-
 (x = 1:10 - 0.5)
 Round(x)
 round(x) # compare with the above
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \references{
 See wikipedia subject "Rounding"

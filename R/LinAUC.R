@@ -1,15 +1,14 @@
 #' Area Under the Curve(AUC) and Area Under the first Moment Curve(AUMC) by
 #' linear trapezoidal method
-#' 
+#'
 #' It calculates AUC and AUMC using linear trapezoidal method
-#' 
+#'
 #' This function returns AUC and AUMC by linear trapezoidal method.
-#' 
+#'
 #' @param x vector values of independent variable, usually time
 #' @param y vector values of dependent variable, usually concentration
 #' @return \item{AUC}{area under the curve} \item{AUMC}{area under the first
 #' moment curve}
-#' @author Kyun-Seop Bae <k@@acr.kr>
 #' @seealso \code{\link{LogAUC}},\code{\link{AUC}}
 #' @references \enumerate{ \item Gabrielsson J, Weiner D. Pharmacokinetic and
 #' Pharmacodynamic Data Analysis - Concepts and Applications. 5th ed. 2016.
@@ -19,10 +18,8 @@
 #' Perrier D. Pharmacokinetics. 2nd ed. revised and expanded. 1982. }
 #' @keywords AUC
 #' @examples
-#' 
 #' LinAUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"])
 #' AUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"]) # compare the last line
-#' 
 #' @export LinAUC
 LinAUC <-
 function(x, y) # Method="Linear"

@@ -29,13 +29,8 @@ a table of cumulative values.
 interpolation.  \code{Method="Log"} means linear-up and log-down method.
 }
 \examples{
-
 AUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"]) # Default is "Linear"
 AUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"], Method="Log")
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \references{
 Rowland M, Tozer TN. Clinical Pharmacokinetics and

@@ -1,6 +1,6 @@
-\name{NonCompart-package}
-\alias{NonCompart-package}
-\alias{NonCompart}
+\name{ncar-package}
+\alias{ncar-package}
+\alias{ncar}
 \docType{package}
 \title{Noncompartmental Analysis for Pharmacokinetic Data}
 \description{

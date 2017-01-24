@@ -34,14 +34,9 @@ analysis is somewhat challenging, and it could vary by analysis performer.
 Currently this function uses ordinary least square method(OLS) only.
 }
 \examples{
-
 BestSlope(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"])
 BestSlope(Indometh[Indometh$Subject==1, "time"],Indometh[Indometh$Subject==1, "conc"],
           AdmMode="Bolus")
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \seealso{
 \code{\link{Slope}}

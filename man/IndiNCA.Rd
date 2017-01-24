@@ -85,7 +85,6 @@ This performs a noncompartmental analysis for a subject. It returns
 practically the same result with the most popular commercial software.
 }
 \examples{
-
 IndiNCA(Theoph[Theoph$Subject==1,"Time"], Theoph[Theoph$Subject==1, "conc"], Dose=320)
 IndiNCA(Indometh[Indometh$Subject==1,"time"], Indometh[Indometh$Subject==1, "conc"], Dose=25,
         AdmMode="Bolus")
@@ -106,10 +105,6 @@ IndiNCA(Indometh[Indometh$Subject==1,"time"], Indometh[Indometh$Subject==1, "con
         AdmMode="Bolus", iAUC=iAUC)
 IndiNCA(Indometh[Indometh$Subject==1,"time"], Indometh[Indometh$Subject==1, "conc"], Dose=25,
         AdmMode="Infusion", TimeInfusion=0.25, iAUC=iAUC)
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \references{
 \enumerate{ \item Gabrielsson J, Weiner D. Pharmacokinetic and

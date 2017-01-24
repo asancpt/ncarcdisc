@@ -23,14 +23,9 @@ It calculates AUC and AUMC using linear-up log-down method
 This function returns AUC and AUMC by linear-up log-down method.
 }
 \examples{
-
 LogAUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"])
 # Compare the last line with the above
-AUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"], Method="Log") 
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
+AUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"], Method="Log")
 }
 \references{
 \enumerate{ \item Gabrielsson J, Weiner D. Pharmacokinetic and

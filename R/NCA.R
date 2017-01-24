@@ -1,11 +1,11 @@
 #' Noncompartmental analysis for a dataset with multiple subjects
-#' 
+#'
 #' conduct noncompartmental analysis for many subjects in a data table
-#' 
-#' This function calls \code{IndiNCA} repeatedly to do NCA for each subject.
-#' If you specify \code{Report="Text"}, this function returns in free text
-#' format to be used in a report file.
-#' 
+#'
+#' This function calls \code{IndiNCA} repeatedly to do NCA for each subject. If
+#' you specify \code{Report="Text"}, this function returns in free text format
+#' to be used in a report file.
+#'
 #' @param Data name of data table containing time-concentration data of
 #' multiple subjects
 #' @param colSubj column name for subject ID
@@ -69,7 +69,6 @@
 #' CLST, for intravascular administration only} \item{VSSP}{volume of
 #' distribution at stead state using CLSTP, for intravascular administration
 #' only}
-#' @author Kyun-Seop Bae <k@@acr.kr>
 #' @seealso \code{\link{IndiNCA}}
 #' @references \enumerate{ \item Gabrielsson J, Weiner D. Pharmacokinetic and
 #' Pharmacodynamic Data Analysis - Concepts and Applications. 5th ed. 2016.
@@ -79,15 +78,14 @@
 #' Perrier D. Pharmacokinetics. 2nd ed. revised and expanded. 1982. }
 #' @keywords NCA
 #' @examples
-#' 
 #' # Theoph and Indometh data: dose in mg, conc in mg/L, time in h
 #' NCA(Theoph, "Subject", "Time", "conc", Dose=320)
 #' NCA(Indometh, "Subject", "time", "conc", Dose=25, AdmMode="Bolus")
-#' 
+#'
 #' iAUC = data.frame(Name=c("AUC[0-12h]","AUC[0-24h]"), Start=c(0,0), End=c(12,24)) ; iAUC
 #' NCA(Theoph, "Subject", "Time", "conc", Dose=320, iAUC=iAUC)
 #' NCA(Indometh, "Subject", "time", "conc", Dose=25, AdmMode="Bolus", iAUC=iAUC)
-#' 
+#'
 #' writeLines(NCA(Theoph, "Subject", "Time", "conc", Dose=320, Report="Text"),
 #'            "Theoph_Linear_CoreOutput.txt")
 #' writeLines(NCA(Theoph, "Subject", "Time", "conc", Dose=320, Method="Log", Report="Text"),
@@ -100,7 +98,6 @@
 #'            Report="Text"), "Indometh_Infusion_Linear_CoreOutput.txt")
 #' writeLines(NCA(Indometh, "Subject", "time", "conc", Dose=25, AdmMode="Infusion", TimeInfusion=0.25,
 #'            Method="Log", Report="Text"), "Indometh_Infusion_Log_CoreOutput.txt")
-#' 
 #' @export NCA
 NCA <-
 function(Data, colSubj, colTime, colConc, colTrt, Method="Linear", Dose=0, AdmMode="Extravascular", TimeInfusion=0, Report="Table", iAUC)

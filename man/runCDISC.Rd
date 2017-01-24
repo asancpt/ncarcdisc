@@ -19,35 +19,15 @@ runCDISC(wd = getwd(), filenameDM = "DM", filenameEX = "EX",
 \item{extension}{file extension, currently supporting only \code{.xpt}}
 
 \item{incl_arm}{Vector of study arms of interest}
-
-\item{wd}{Working directory of CDISC dataset, containing DM, EX and PC}
-
-\item{filenameDM}{A filename of DM domain. Usually DM or dm}
-
-\item{filenameEX}{A filename of EX domain. Usually EX or ex}
-
-\item{filenamePC}{A filename of PC domain. Usually PC or pc}
-
-\item{extension}{file extension, currently supporting only \code{.xpt}}
-
-\item{incl_arm}{Vector of study arms of interest}
 }
 \value{
 List of output data of noncompartmental analysis
-
-List of output data of noncompartmental analysis
 }
 \description{
-\code{runCDISC} uses NonCompart package to perform a noncompartmental analysis of
+\code{runCDISC} uses ncar package to perform a noncompartmental analysis of
 CDISC standardized pharmacokinetic dataset.
 }
 \examples{
 #Currently there is no publicly open CDISC dataset for presenting an example.
-Conduct a noncompartmental analysis with CDISC dataset
-
-\\code{runCDISC} uses NonCompart package to perform a noncompartmental
-analysis of CDISC standardized pharmacokinetic dataset.
-
-
 }
 

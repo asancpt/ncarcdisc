@@ -1,2 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^.*\.sh$
+^.*\.yml$
+^README\.md$
+^data-raw$

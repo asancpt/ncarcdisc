@@ -88,12 +88,11 @@ only}
 conduct noncompartmental analysis for many subjects in a data table
 }
 \details{
-This function calls \code{IndiNCA} repeatedly to do NCA for each subject.
-If you specify \code{Report="Text"}, this function returns in free text
-format to be used in a report file.
+This function calls \code{IndiNCA} repeatedly to do NCA for each subject. If
+you specify \code{Report="Text"}, this function returns in free text format
+to be used in a report file.
 }
 \examples{
-
 # Theoph and Indometh data: dose in mg, conc in mg/L, time in h
 NCA(Theoph, "Subject", "Time", "conc", Dose=320)
 NCA(Indometh, "Subject", "time", "conc", Dose=25, AdmMode="Bolus")
@@ -114,10 +113,6 @@ writeLines(NCA(Indometh, "Subject", "time", "conc", Dose=25, AdmMode="Infusion",
            Report="Text"), "Indometh_Infusion_Linear_CoreOutput.txt")
 writeLines(NCA(Indometh, "Subject", "time", "conc", Dose=25, AdmMode="Infusion", TimeInfusion=0.25,
            Method="Log", Report="Text"), "Indometh_Infusion_Log_CoreOutput.txt")
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \references{
 \enumerate{ \item Gabrielsson J, Weiner D. Pharmacokinetic and

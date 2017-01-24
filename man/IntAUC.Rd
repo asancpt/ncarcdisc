@@ -32,13 +32,8 @@ series of x and y. If t1 and/or t2 cannot be found within x vector, it
 interpolates according to the \code{Method}.
 }
 \examples{
-
 Res = IndiNCA(Theoph[Theoph$Subject==1,"Time"], Theoph[Theoph$Subject==1, "conc"], Dose=320)
 IntAUC(Theoph[Theoph$Subject==1, "Time"], Theoph[Theoph$Subject==1, "conc"], t1=0.5, t2=11, Res)
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \references{
 \enumerate{ \item Gabrielsson J, Weiner D. Pharmacokinetic and

@@ -29,12 +29,7 @@ log(concentration) ~ time. This function is usually called by
 directly.
 }
 \examples{
-
 Slope(Indometh[Indometh$Subject==1, "time"],Indometh[Indometh$Subject==1, "conc"])
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \seealso{
 \code{\link{BestSlope}}

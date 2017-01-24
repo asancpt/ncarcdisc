@@ -35,14 +35,15 @@ increasing x values.
 }
 \examples{
 
+
+
 x = 10:1 + 0.1
 y = -2*x + 40.2
 Interpol(x, y, 1.5)
 Interpol(x, y, 1.5, Method="Log")
 
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
+
+
 }
 \seealso{
 \code{\link{IntAUC}}

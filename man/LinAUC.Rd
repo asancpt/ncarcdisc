@@ -23,13 +23,8 @@ It calculates AUC and AUMC using linear trapezoidal method
 This function returns AUC and AUMC by linear trapezoidal method.
 }
 \examples{
-
 LinAUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"])
 AUC(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"]) # compare the last line
-
-}
-\author{
-Kyun-Seop Bae <k@acr.kr>
 }
 \references{
 \enumerate{ \item Gabrielsson J, Weiner D. Pharmacokinetic and

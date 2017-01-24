@@ -16,15 +16,18 @@
 #' @param Method either of \code{"Linear"} or \code{"Log"} to indicate the way
 #' to interpolate
 #' @return new x and y vector containing xnew and ynew point
-#' @author Kyun-Seop Bae <k@@acr.kr>
 #' @seealso \code{\link{IntAUC}}
-#' @keywords interpolation interval AUC partial AUC
+#' @keywords AUC interpolation interval partial
 #' @examples
+#' 
+#' 
 #' 
 #' x = 10:1 + 0.1
 #' y = -2*x + 40.2
 #' Interpol(x, y, 1.5)
 #' Interpol(x, y, 1.5, Method="Log")
+#' 
+#' 
 #' 
 #' @export Interpol
 Interpol <-
