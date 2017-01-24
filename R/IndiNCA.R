@@ -135,7 +135,7 @@ function(x, y, Dose=0, Method="Linear", AdmMode="Extravascular", TimeInfusion=0,
     Result = vector()
     cLineNo = 1
     Result[cLineNo] = paste("                        NONCOMPARTMENTAL ANALYSIS REPORT") ; cLineNo = cLineNo + 1
-    Result[cLineNo] = paste0("                       Package version ", packageVersion("NonCompart"), " (", packageDescription("NonCompart")$Date, ")") ; cLineNo = cLineNo + 1
+    Result[cLineNo] = paste0("                       Package version ", packageVersion("ncar"), " (", packageDescription("ncar")$Date, ")") ; cLineNo = cLineNo + 1
     Result[cLineNo] = paste("                         ", version$version.string) ; cLineNo = cLineNo + 1
     Result[cLineNo] = "" ; cLineNo = cLineNo + 1
     Result[cLineNo] = paste("Date and Time:", Sys.time(), Sys.timezone(location=FALSE)) ; cLineNo = cLineNo + 1
