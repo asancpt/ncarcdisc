@@ -1,4 +1,4 @@
-Package: NonCompart
+Package: ncar
 Version: 0.2.7
 Date: 2017-01-20
 Title: Noncompartmental Analysis for Pharmacokinetic Data
@@ -12,15 +12,15 @@ Description: Conduct a noncompartmental analysis as closely as possible to the m
              For more details on noncompartmental analysis, see the reference: Gabrielsson J, Weiner D. Pharmacokinetic and Pharmacodynamic Data Analysis - Concepts and Applications. 5th ed. 2016. (ISBN:9198299107)
              *) Acknowledgement: Author thanks for the careful review and valuable input of Dr. Jee Eun Lee.
 Depends: R (>= 2.0.0)
-Author: Kyun-Seop Bae
-Maintainer: Kyun-Seop Bae <k@acr.kr>
+Author: Kyun-Seop Bae, Sungpil Han
+Maintainer: Sungpil Han <shan@acp.kr>
 Copyright: 2017, Kyun-Seop Bae
 Imports: dplyr, Hmisc, lubridate, measurements
 License: GPL-3
 NeedsCompilation: no
 LazyLoad: yes
-URL: https://github.com/asancpt/NonCompart
-BugReports: https://github.com/asancpt/NonCompart/issues
+URL: https://github.com/asancpt/ncar
+BugReports: https://github.com/asancpt/ncar/issues
 Packaged: 2017-01-01 07:07:58 UTC; K
 Date/Publication: 2017-01-01 10:08:58
 RoxygenNote: 5.0.1

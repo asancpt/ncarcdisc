@@ -1,12 +1,12 @@
-# NonCompart
+# ncar
 
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/NonCompart)](https://cran.r-project.org/package=NonCompart) 
 [![Rdoc](http://www.rdocumentation.org/badges/version/NonCompart)](http://www.rdocumentation.org/packages/NonCompart)
 [![CRAN Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/NonCompart)](https://cran.r-project.org/package=NonCompart) 
 [![CRAN Monthly Downloads](http://cranlogs.r-pkg.org/badges/NonCompart)](https://cran.r-project.org/package=NonCompart) 
-[![Travis-CI Build Status](https://travis-ci.org/asancpt/NonCompart.svg?branch=master)](https://travis-ci.org/asancpt/NonCompart) 
+[![Travis-CI Build Status](https://travis-ci.org/asancpt/ncar.svg?branch=master)](https://travis-ci.org/asancpt/ncar) 
 
-> NonCompart R package
+> ncar R package (Derivative of NonCompart R package)
 
 Overview
 --------
@@ -23,11 +23,12 @@ Installation
 
     # get development version
     install.packages('devtools')
-    devtools::install_github('asancpt/NonCompart')
+    devtools::install_github('asancpt/ncar')
    
 Contact
 -------
 
-- NonCompart Package developer: Kyun-Seop Bae <k@acr.kr>, Jee Eun Lee <fly.jeeeun@gmail.com>, Sungpil Han <shan@acp.kr>
-- Copyright: 2016, Kyun-Seop Bae, Jee Eun Lee, Sungpil Han
+- NonCompart Package developer: Kyun-Seop Bae <k@acr.kr>, Sungpil Han <shan@acp.kr>
+- Copyright: 2016, Kyun-Seop Bae, Sungpil Han
 - License: GPL-3
+
