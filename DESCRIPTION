@@ -1,7 +1,12 @@
 Package: ncar
-Version: 0.2.7
-Date: 2017-01-20
+Type: Package
 Title: Noncompartmental Analysis for Pharmacokinetic Data
+Version: 0.2.7
+Authors@R: c(
+    person("Kyun-Seop", "Bae", role = c("aut", "cre"), email = "k@acr.kr"),
+    person("Sungpil", "Han", role = c("aut"), email = "shan@acp.kr")
+    )
+Maintainer: Sungpil Han <shan@acp.kr>
 Description: Conduct a noncompartmental analysis as closely as possible to the most widely used commercial software for pharmacokinetic analysis, i.e. 'Phoenix(R) WinNonlin(R)' <https://www.certara.com/software/pkpd-modeling-and-simulation/phoenix-winnonlin/>.
              Some features include:
              1) Use CDISC SDTM PP domain terms.
@@ -11,16 +16,12 @@ Description: Conduct a noncompartmental analysis as closely as possible to the m
              5) Perform a noncompartmental analysis of CDISC standardized pharmacokinetic dataset (.XPT)
              For more details on noncompartmental analysis, see the reference: Gabrielsson J, Weiner D. Pharmacokinetic and Pharmacodynamic Data Analysis - Concepts and Applications. 5th ed. 2016. (ISBN:9198299107)
              *) Acknowledgement: Author thanks for the careful review and valuable input of Dr. Jee Eun Lee.
-Depends: R (>= 2.0.0)
-Author: Kyun-Seop Bae, Sungpil Han
-Maintainer: Sungpil Han <shan@acp.kr>
-Copyright: 2017, Kyun-Seop Bae
-Imports: dplyr, Hmisc, lubridate, measurements
 License: GPL-3
-NeedsCompilation: no
 LazyLoad: yes
+Copyright: 2017, Kyun-Seop Bae
+Depends: R (>= 2.0.0)
+Imports: dplyr, Hmisc, lubridate, measurements
+NeedsCompilation: no
 URL: https://github.com/asancpt/ncar
 BugReports: https://github.com/asancpt/ncar/issues
-Packaged: 2017-01-01 07:07:58 UTC; K
-Date/Publication: 2017-01-01 10:08:58
 RoxygenNote: 5.0.1

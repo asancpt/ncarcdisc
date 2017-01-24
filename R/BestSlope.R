@@ -1,4 +1,34 @@
-#' @export
+#' Choose best fit slope for the log(y) and x regression by the criteria of
+#' adjusted R-square
+#' 
+#' It sequentially fits (log(y) ~ x) from the last point of x to the previous
+#' points with at least 3 points. It chooses a slope the highest adjusted
+#' R-square. If the difference is less then 1e-4, it chooses longer slope.
+#' 
+#' Choosing the best terminal slope (y in log scale) in pharmacokinetic
+#' analysis is somewhat challenging, and it could vary by analysis performer.
+#' Currently this function uses ordinary least square method(OLS) only.
+#' 
+#' @param x vector values of x-axis, usually time
+#' @param y vector values of y-axis, usually concentration
+#' @param AdmMode one of \code{"Bolus"} or \code{"Infusion"} or
+#' \code{"Extravascular"} to indicate drug administration mode
+#' @return \item{R2}{R-squared} \item{R2ADJ}{adjusted R-squared}
+#' \item{LAMZNPT}{number of points used for slope} \item{LAMZ}{negative of
+#' slope, lambda_z} \item{b0}{intercept of regression line}
+#' \item{CORRXY}{correlation of log(y) and x} \item{LAMZLL}{earliest x for
+#' lambda_z} \item{LAMZUL}{last x for lambda_z} \item{CLSTP}{predicted y value
+#' at last point, predicted concentration for the last time point}
+#' @author Kyun-Seop Bae <k@@acr.kr>
+#' @seealso \code{\link{Slope}}
+#' @keywords Slope best fit slope
+#' @examples
+#' 
+#' BestSlope(Theoph[Theoph$Subject==1, "Time"],Theoph[Theoph$Subject==1, "conc"])
+#' BestSlope(Indometh[Indometh$Subject==1, "time"],Indometh[Indometh$Subject==1, "conc"],
+#'           AdmMode="Bolus")
+#' 
+#' @export BestSlope
 BestSlope <-
 function(x, y, AdmMode="Extravascular")
 {

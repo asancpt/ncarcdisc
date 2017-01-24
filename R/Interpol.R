@@ -1,4 +1,32 @@
-#' @export
+#' Interpolate y value
+#' 
+#' It interpolates y value when a corresponding x value (xnew) does not exist
+#' within x vector
+#' 
+#' This function interpolate y value, if xnew is not in x vector. If xnew is in
+#' x vector, it just returns the given x and y vector. This function usually is
+#' called by \code{IntAUC} function Returned vector is sorted in the order of
+#' increasing x values.
+#' 
+#' @param x vector values of x-axis, usually time
+#' @param y vector values of y-axis, usually concentration
+#' @param xnew new x point to be interpolated, usually new time point
+#' @param Slope slope of regression log(y) ~ x
+#' @param b0 y value of just left point of xnew
+#' @param Method either of \code{"Linear"} or \code{"Log"} to indicate the way
+#' to interpolate
+#' @return new x and y vector containing xnew and ynew point
+#' @author Kyun-Seop Bae <k@@acr.kr>
+#' @seealso \code{\link{IntAUC}}
+#' @keywords interpolation interval AUC partial AUC
+#' @examples
+#' 
+#' x = 10:1 + 0.1
+#' y = -2*x + 40.2
+#' Interpol(x, y, 1.5)
+#' Interpol(x, y, 1.5, Method="Log")
+#' 
+#' @export Interpol
 Interpol <-
 function(x, y, xnew, Slope, b0, Method="Linear")
 {
