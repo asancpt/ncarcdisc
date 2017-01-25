@@ -43,10 +43,12 @@ runCDISC <- function(wd = getwd(), filenameDM = "DM", filenameEX = "EX", filenam
     DM <- sasxport.get(paste0(wd, "/", filenameDM, ".", extension), as.is = TRUE)
     EX <- sasxport.get(paste0(wd, "/", filenameEX, ".", extension), as.is = TRUE)
     PC <- sasxport.get(paste0(wd, "/", filenamePC, ".", extension), as.is = TRUE)
+
     names(DM) <- toupper(names(DM))
     names(EX) <- toupper(names(EX))
     names(PC) <- toupper(names(PC))
     Output$EX <- EX
+
     if (is.null(incl_arm)){
         FocusSubj <- DM %>%
             select(USUBJID) %>% as.matrix()
