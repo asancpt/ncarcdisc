@@ -1,7 +1,7 @@
 Package: ncar
 Type: Package
-Title: Noncompartmental Analysis for Pharmacokinetic Data
-Version: 0.2.7
+Title: Noncompartmental Analysis of Pharmacokinetic Data for CDISC Standardized Parameters
+Version: 0.3
 Author: Kyun-Seop Bae [aut, cre], Sungpil Han [aut]
 Maintainer: Sungpil Han <shan@acp.kr>
 Description: Conduct a noncompartmental analysis as closely as possible to the most widely used commercial software for pharmacokinetic analysis, i.e. 'Phoenix(R) WinNonlin(R)' <https://www.certara.com/software/pkpd-modeling-and-simulation/phoenix-winnonlin/>.

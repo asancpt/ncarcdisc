@@ -22,6 +22,23 @@
 runCDISC <- function(wd = getwd(), filenameDM = "DM", filenameEX = "EX", filenamePC = "PC",
                      extension = "xpt", incl_arm = NULL){
 
+    # assign NULL - To suppress notes of R CMD check --as-CRAN
+    ACTUALHR <- NULL
+    ARM <- NULL
+    EXDOSE <- NULL
+    EXDOSECONV <- NULL
+    EXDOSU <- NULL
+    EXDOSUCONV <- NULL
+    EXENDTC <- NULL
+    EXSTDTC <- NULL
+    INFUSIONHR <- NULL
+    PCDTC <- NULL
+    PCSPEC <- NULL
+    PCSTRESN <- NULL
+    PCSTRESU <- NULL
+    USUBJID <- NULL
+
+    # Actual function starts
     Output <- list()
     DM <- sasxport.get(paste0(wd, "/", filenameDM, ".", extension), as.is = TRUE)
     EX <- sasxport.get(paste0(wd, "/", filenameEX, ".", extension), as.is = TRUE)
@@ -35,7 +52,7 @@ runCDISC <- function(wd = getwd(), filenameDM = "DM", filenameEX = "EX", filenam
             select(USUBJID) %>% as.matrix()
     } else {
         FocusSubj <- DM %>%
-            filter(ARM %in% FocusArm) %>%
+            filter(ARM %in% incl_arm) %>%
             select(USUBJID) %>% as.matrix()
     }
 
