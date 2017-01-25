@@ -22,3 +22,5 @@ No declared reverse dependencies:
 
     devtools::revdep('ncar')
     character(0)
+
+(EOF)
