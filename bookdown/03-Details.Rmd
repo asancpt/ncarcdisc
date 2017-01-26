@@ -1,5 +1,10 @@
 # Details
 
+
+## In this chapter
+
+We will give you details of each software and perform NCA with a dataset `Theoph`. In the end, we will compare C~max~ and AUC~inf~ calculated by each software or package.
+
 ## ncar
 
 ```{r}
@@ -10,7 +15,9 @@ iAUC = data.frame(Name=c("AUC[0-12h]","AUC[0-24h]"), Start=c(0,0), End=c(12,24))
 NCA(Theoph, "Subject", "Time", "conc", Dose=320, iAUC=iAUC)
 ```
 
-## PKNCA: Automation of Noncompartmental Analysis in R 
+## PKNCA
+
+Automation of Noncompartmental Analysis in R 
 
 ### ISoP Pharmacometrics Study Group Presentation
 * 강의 동영상 https://www.youtube.com/watch?v=WCmFrheYtcc
@@ -143,3 +150,7 @@ summary(my.results.manual)
 ## Make a pretty table instead of the data.frame preformatted printout
 knitr::kable(summary(my.results.manual))
 ```
+
+## Summary
+
+`ncar` is good.

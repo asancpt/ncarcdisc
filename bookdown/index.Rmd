@@ -1,11 +1,11 @@
 ---
-title: "R Packages for Noncompartmental Analysis"
+title: "Noncompartmental Analysis by R Packages"
 author: ["Kyun-Seop Bae", "Sungpil Han"]
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
-documentclass: krantz
+documentclass: book
 #bibliography: ["References.bib"]
-csl: springer-vancouver.csl
+#csl: springer-vancouver.csl
 link-citations: true
 site: bookdown::bookdown_site
 description: "ncar R package"
@@ -18,3 +18,6 @@ github-repo: asancpt/ncar
 # Preface {-}
 
 In this book, we will cover R Packages for Noncompartmental Analysis.
+
+![Book cover](cover.jpeg)
+

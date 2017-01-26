@@ -4,9 +4,7 @@ formats = "bookdown::gitbook" #formats = "bookdown::pdf_book"
 travis = !is.na(Sys.getenv('CI', NA))
 
 # provide default formats if necessary
-if (length(formats) == 0) formats = c(
-  'bookdown::pdf_book', 'bookdown::epub_book', 'bookdown::gitbook'
-)
+if (length(formats) == 0) formats = c('bookdown::gitbook', 'bookdown::pdf_book', 'bookdown::epub_book')
 
 # render the book to all formats unless they are specified via command-line args
 for (fmt in formats) {
@@ -16,6 +14,7 @@ for (fmt in formats) {
   if (!travis && fmt == 'bookdown::epub_book')
     bookdown::calibre('_book/bookdown.epub', 'mobi')
 }
+
 # patch HTML files in gh-pages if built on Travis
 if (travis) {
   r = '<body onload="window.location = \'https://bookdown.org/yihui\'+location.pathname">'

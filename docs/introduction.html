@@ -5,12 +5,12 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>R Packages for Noncompartmental Analysis</title>
+  <title>Noncompartmental Analysis by R Packages</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="ncar R package">
   <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
-  <meta property="og:title" content="R Packages for Noncompartmental Analysis" />
+  <meta property="og:title" content="Noncompartmental Analysis by R Packages" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://asancpt.github.io/ncar/docs" />
   
@@ -18,7 +18,7 @@
   <meta name="github-repo" content="asancpt/ncar" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="R Packages for Noncompartmental Analysis" />
+  <meta name="twitter:title" content="Noncompartmental Analysis by R Packages" />
   
   <meta name="twitter:description" content="ncar R package" />
   
@@ -27,7 +27,7 @@
 <meta name="author" content="Sungpil Han">
 
 
-<meta name="date" content="2017-01-25">
+<meta name="date" content="2017-01-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -90,6 +90,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -101,30 +102,53 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./index.html">Noncompartmental Analysis by R Packages</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html"><i class="fa fa-check"></i><b>2</b> Comparison of Noncompartmental analysis software</a><ul>
-<li class="chapter" data-level="2.1" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#certara-phoenix-winnonlin"><i class="fa fa-check"></i><b>2.1</b> Certara Phoenix WinNonLin</a></li>
-<li class="chapter" data-level="2.2" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-pknca"><i class="fa fa-check"></i><b>2.2</b> R package: PKNCA</a></li>
-<li class="chapter" data-level="2.3" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-ncar"><i class="fa fa-check"></i><b>2.3</b> R package: ncar</a></li>
-<li class="chapter" data-level="2.4" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-ncappc"><i class="fa fa-check"></i><b>2.4</b> R package: ncappc</a></li>
-<li class="chapter" data-level="2.5" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-pk"><i class="fa fa-check"></i><b>2.5</b> R package: PK</a></li>
+<li class="chapter" data-level="2.1" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#in-this-chapter"><i class="fa fa-check"></i><b>2.1</b> In this chapter</a></li>
+<li class="chapter" data-level="2.2" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#certara-phoenix-winnonlin"><i class="fa fa-check"></i><b>2.2</b> Certara Phoenix WinNonLin</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#pros"><i class="fa fa-check"></i><b>2.2.1</b> Pros</a></li>
+<li class="chapter" data-level="2.2.2" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#cons"><i class="fa fa-check"></i><b>2.2.2</b> Cons</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-pknca"><i class="fa fa-check"></i><b>2.3</b> R package: PKNCA</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#pros-1"><i class="fa fa-check"></i><b>2.3.1</b> Pros</a></li>
+<li class="chapter" data-level="2.3.2" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#cons-1"><i class="fa fa-check"></i><b>2.3.2</b> Cons</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-ncar"><i class="fa fa-check"></i><b>2.4</b> R package: ncar</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#pros-2"><i class="fa fa-check"></i><b>2.4.1</b> Pros</a></li>
+<li class="chapter" data-level="2.4.2" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#cons-2"><i class="fa fa-check"></i><b>2.4.2</b> Cons</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-ncappc"><i class="fa fa-check"></i><b>2.5</b> R package: ncappc</a></li>
+<li class="chapter" data-level="2.6" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#kinetica"><i class="fa fa-check"></i><b>2.6</b> Kinetica</a></li>
+<li class="chapter" data-level="2.7" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#pk-module-in-r"><i class="fa fa-check"></i><b>2.7</b> PK module in R</a></li>
+<li class="chapter" data-level="2.8" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#scientist"><i class="fa fa-check"></i><b>2.8</b> Scientist</a></li>
+<li class="chapter" data-level="2.9" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#pksolver"><i class="fa fa-check"></i><b>2.9</b> PKSolver</a></li>
+<li class="chapter" data-level="2.10" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#r-package-pk"><i class="fa fa-check"></i><b>2.10</b> R package: PK</a></li>
+<li class="chapter" data-level="2.11" data-path="comparison-of-noncompartmental-analysis-software.html"><a href="comparison-of-noncompartmental-analysis-software.html#summary"><i class="fa fa-check"></i><b>2.11</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="details.html"><a href="details.html"><i class="fa fa-check"></i><b>3</b> Details</a><ul>
-<li class="chapter" data-level="3.1" data-path="details.html"><a href="details.html#ncar"><i class="fa fa-check"></i><b>3.1</b> ncar</a></li>
-<li class="chapter" data-level="3.2" data-path="details.html"><a href="details.html#pknca-automation-of-noncompartmental-analysis-in-r"><i class="fa fa-check"></i><b>3.2</b> PKNCA: Automation of Noncompartmental Analysis in R</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="details.html"><a href="details.html#isop-pharmacometrics-study-group-presentation"><i class="fa fa-check"></i><b>3.2.1</b> ISoP Pharmacometrics Study Group Presentation</a></li>
-<li class="chapter" data-level="3.2.2" data-path="details.html"><a href="details.html#-nca----."><i class="fa fa-check"></i><b>3.2.2</b> 오픈소스 NCA - 지금이 적기이다.</a></li>
-<li class="chapter" data-level="3.2.3" data-path="details.html"><a href="details.html#--"><i class="fa fa-check"></i><b>3.2.3</b> 할수 있는 것</a></li>
-<li class="chapter" data-level="3.2.4" data-path="details.html"><a href="details.html#section-3.2.4"><i class="fa fa-check"></i><b>3.2.4</b> 한계</a></li>
-<li class="chapter" data-level="3.2.5" data-path="details.html"><a href="details.html#pknca--0.7"><i class="fa fa-check"></i><b>3.2.5</b> PKNCA 현재는 0.7</a></li>
-<li class="chapter" data-level="3.2.6" data-path="details.html"><a href="details.html#pknca--1.0-."><i class="fa fa-check"></i><b>3.2.6</b> PKNCA 곧 1.0이 나올것이다.</a></li>
-<li class="chapter" data-level="3.2.7" data-path="details.html"><a href="details.html#section-3.2.7"><i class="fa fa-check"></i><b>3.2.7</b> 참고사항</a></li>
-<li class="chapter" data-level="3.2.8" data-path="details.html"><a href="details.html#rstudio--hands-on-"><i class="fa fa-check"></i><b>3.2.8</b> RStudio를 사용한 Hands-on 실습</a></li>
-<li class="chapter" data-level="3.2.9" data-path="details.html"><a href="details.html#closing"><i class="fa fa-check"></i><b>3.2.9</b> Closing</a></li>
-<li class="chapter" data-level="3.2.10" data-path="details.html"><a href="details.html#section-3.2.10"><i class="fa fa-check"></i><b>3.2.10</b> 결론</a></li>
+<li class="chapter" data-level="3.1" data-path="details.html"><a href="details.html#in-this-chapter-1"><i class="fa fa-check"></i><b>3.1</b> In this chapter</a></li>
+<li class="chapter" data-level="3.2" data-path="details.html"><a href="details.html#ncar"><i class="fa fa-check"></i><b>3.2</b> ncar</a></li>
+<li class="chapter" data-level="3.3" data-path="details.html"><a href="details.html#pknca"><i class="fa fa-check"></i><b>3.3</b> PKNCA</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="details.html"><a href="details.html#isop-pharmacometrics-study-group-presentation"><i class="fa fa-check"></i><b>3.3.1</b> ISoP Pharmacometrics Study Group Presentation</a></li>
+<li class="chapter" data-level="3.3.2" data-path="details.html"><a href="details.html#-nca----."><i class="fa fa-check"></i><b>3.3.2</b> 오픈소스 NCA - 지금이 적기이다.</a></li>
+<li class="chapter" data-level="3.3.3" data-path="details.html"><a href="details.html#--"><i class="fa fa-check"></i><b>3.3.3</b> 할수 있는 것</a></li>
+<li class="chapter" data-level="3.3.4" data-path="details.html"><a href="details.html#section-3.3.4"><i class="fa fa-check"></i><b>3.3.4</b> 한계</a></li>
+<li class="chapter" data-level="3.3.5" data-path="details.html"><a href="details.html#pknca--0.7"><i class="fa fa-check"></i><b>3.3.5</b> PKNCA 현재는 0.7</a></li>
+<li class="chapter" data-level="3.3.6" data-path="details.html"><a href="details.html#pknca--1.0-."><i class="fa fa-check"></i><b>3.3.6</b> PKNCA 곧 1.0이 나올것이다.</a></li>
+<li class="chapter" data-level="3.3.7" data-path="details.html"><a href="details.html#section-3.3.7"><i class="fa fa-check"></i><b>3.3.7</b> 참고사항</a></li>
+<li class="chapter" data-level="3.3.8" data-path="details.html"><a href="details.html#rstudio--hands-on-"><i class="fa fa-check"></i><b>3.3.8</b> RStudio를 사용한 Hands-on 실습</a></li>
+<li class="chapter" data-level="3.3.9" data-path="details.html"><a href="details.html#closing"><i class="fa fa-check"></i><b>3.3.9</b> Closing</a></li>
+<li class="chapter" data-level="3.3.10" data-path="details.html"><a href="details.html#section-3.3.10"><i class="fa fa-check"></i><b>3.3.10</b> 결론</a></li>
 </ul></li>
+<li class="chapter" data-level="3.4" data-path="details.html"><a href="details.html#summary-1"><i class="fa fa-check"></i><b>3.4</b> Summary</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="http://github.com/asancpt/ncar">ncar Github Repo</a></li>
+
 </ul>
 
       </nav>
@@ -134,7 +158,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R Packages for Noncompartmental Analysis</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Noncompartmental Analysis by R Packages</a>
           </h1>
         </div>
 
@@ -181,10 +205,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/asancpt/ncar/edit/master/bookdown/01-Intro.Rmd",
+"text": "Edit"
 },
-"download": null,
+"download": ["bookdown.pdf", "bookdown.epub", "bookdown.mobi"],
 "toc": {
 "collapse": "subsection"
 }

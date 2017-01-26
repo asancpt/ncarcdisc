@@ -1,0 +1,10 @@
+Description,Industry standard,CDISC Input,CDISC Output,Multiple Dose NCA,Urine NCA
+WinNonLin,Yes,Not supported,Partially supported,Yes,Yes
+ncar,No,Supported,Fully supported,No,No
+PKNCA,No,Not supported,Partially supported,?,No
+ncanpp,No,Not supported,Not supported,?,?
+PK,No,Not supported,Not supported,?,?
+Kinetica,?,?,?,?,?
+PK module in R,?,?,?,?,?
+Scientist,?,?,?,?,?
+PKSolver,?,?,?,?,?

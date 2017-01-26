@@ -1,12 +1,19 @@
 # Comparison of Noncompartmental analysis software
 
-We will perform NCA with a dataset `Theoph` and compare C~max~ and AUC~inf~ calculated by each software or package.
+```{r}
+
+```
+
+## In this chapter
+
+We will briefly compare NCA softwares.
+
 
 ## Certara Phoenix WinNonLin
 
 <https://www.certara.com/software/pkpd-modeling-and-simulation/phoenix-winnonlin/>
 
-#### Pros
+### Pros
 
 - Validated for several years
 - Industry standard
@@ -14,7 +21,7 @@ We will perform NCA with a dataset `Theoph` and compare C~max~ and AUC~inf~ calc
 - Easy using by GUI 
 - Generating plots supported
 
-#### Cons
+### Cons
 
 - Expansive (~several thousand dollars)
 - Not suitable for reproducible research
@@ -24,13 +31,13 @@ We will perform NCA with a dataset `Theoph` and compare C~max~ and AUC~inf~ calc
 
 <https://github.com/billdenney/pknca>
 
-#### Pros
+### Pros
 
 - Open source and free of charge
 - CDISC SDTM semi compatible (output)
 - Calculate partial(interval) AUC with 'linear' or 'log' interpolation method but in a cumbersome way
 
-#### Cons
+### Cons
  
 - CDISC SDTM not compatible (input)
 - More tests required
@@ -44,14 +51,14 @@ Extension of NonCompart for CDISC input
 
 <https://github.com/asancpt/ncar>
 
-#### Pros
+### Pros
 
 - Open source and free of charge
 - CDISC SDTM fully compatible (input - DM, EX, PC)
 - Output of CDISC SDTM PP domain terms 
 - Calculate partial(interval) AUC with 'linear' or 'log' interpolation method
 
-#### Cons
+### Cons
 
 - More tests required
 - Experience with R language required
@@ -64,11 +71,21 @@ NCA Calculation and Population PK Model Diagnosis
 <https://cran.r-project.org/web/packages/ncappc/index.html>
 <https://www.ncbi.nlm.nih.gov/pubmed/27000291>
 
+
+
 ```{r}
 #install.packages("ncappc")
-#library(ncappc) # Broken Link
+library(ncappc)
 ```
 
+
+## Kinetica
+
+## PK module in R
+
+## Scientist
+
+## PKSolver
 
 ## R package: PK
 
@@ -81,3 +98,10 @@ Basic Non-Compartmental Pharmacokinetics
 #install.packages("PK")
 library(PK)
 ```
+
+## Summary
+
+```{r echo = FALSE}
+knitr::kable(read.csv("comparison.csv", check.names = FALSE))
+```
+
