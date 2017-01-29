@@ -15,6 +15,8 @@ for (fmt in formats) {
     bookdown::calibre('_book/bookdown.epub', 'mobi')
 }
 
+browseURL("../docs/index.html")
+
 # patch HTML files in gh-pages if built on Travis
 if (travis) {
   r = '<body onload="window.location = \'https://bookdown.org/yihui\'+location.pathname">'

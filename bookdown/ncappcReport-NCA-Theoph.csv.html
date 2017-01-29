@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title></title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+/* Set the main font to Calibri, same
+   as My Word 2010 uses. Also set the
+   default font size to 11pt.
+ 
+   The maximum width to 35em enhances
+   readability through optimal line
+   length. Note: this setting is ignored
+   by Word/Libre Office*/
+body  {
+   font-family: Garamond, Georgia;
+   font-size: 13pt;
+   background-color: #FFFFF9;
+   padding-top: 1em;
+   margin: auto;
+   max-width: 50em;
+   text-align:justify;
+}
+ 
+/* Set the paragraph margin and
+   padding to 0 except for the bottom */
+p {
+  padding: 5pt;
+  margin: 0;
+  margin-bottom: 5pt;
+}
+ 
+/* Center the table and add top/bottom margins */
+table{
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: none;
+}
+ 
+/* The tr padding/margin 0 is important for table
+   import, while the font needs to be specified as
+   font and not font-family/font-size due to limiations
+   in Libre Office */
+td, tr{
+  font: 10pt Georgia, serif;
+  padding: 0px;
+  margin: 0px;
+}
+ 
+/* The cell should have a little space to easy reading
+   although this section is mostly ignored by the
+   Libre Office import */
+td {
+  padding: 4px;
+  padding-bottom: 2px;
+}
+ 
+/* Set the headings to correspond to Word-style */
+h1, h2, h3, h4, h5, h6 {
+  margin: 10pt 0pt 0pt 0pt;
+  font-family: Garamond, Georgia;
+  font-weight: bold;
+}
+ 
+/* h1 has a slightly larger top margins
+   so we re-set that from the other*/
+h1 {
+  margin: 24pt 0pt 0pt 0pt;
+  font-size: 20pt;
+  color: #990000;
+  text-align:center;
+}
+ 
+ 
+h2 {
+  font-size: 18pt;
+  color: #990000;
+  text-align:center;
+}
+ 
+h3 {
+  font-size: 11pt;
+  color: #4F81BD;
+}
+ 
+h4 {
+  font-size: 11pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #4F81BD;
+}
+ 
+h5 {
+  font-size: 11pt;
+  font-weight: normal;
+  color: #243F5D;
+}
+ 
+h6 {
+  font-size: 11pt;
+  font-weight: normal;
+  font-style: italic;
+  color: #243F5D;
+}
+ 
+/* The following sections are mostly
+   unrelated to Word/Libre Office imports */
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+ 
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+ 
+pre {
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+ 
+pre code {
+   display: block; padding: 0.5em;
+}
+ 
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+ 
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+ 
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+ 
+@media print {
+   * {
+	  background: transparent !important;
+	  color: black !important;
+	  filter: none !important;
+	  -ms-filter: none !important;
+   }
+ 
+   body {
+	  font-size:11pt;
+	  max-width:100%;
+   }
+ 
+   a, a:visited {
+	  text-decoration: underline;
+   }
+ 
+   hr {
+	  visibility: hidden;
+	  page-break-before: always;
+   }
+ 
+   pre, blockquote {
+	  padding-right: 1em;
+	  page-break-inside: avoid;
+   }
+ 
+   tr, img {
+	  page-break-inside: avoid;
+   }
+ 
+   img {
+	  max-width: 100% !important;
+   }
+ 
+   @page {
+	  margin-top: 2cm;
+	  margin-bottom: 1.5cm;
+	  margin-left: 3cm;
+	  margin-right: 3cm;
+   }
+ 
+   p, h2, h3 {
+	  orphans: 3; widows: 3;
+   }
+ 
+   h2, h3 {
+	  page-break-after: avoid;
+   }
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+<h2></h2>
+
+<h1>Report of <em>ncappc</em> package [*]</h1>
+
+<h2></h2>
+
+<hr/>
+
+<h1></h1>
+
+<h2></h2>
+
+<h2>Summary of the data set and the results</h2>
+
+<pre><code>## Name of the file with the observed data: &quot;Theoph.csv&quot;
+## Route of administration: extravascular
+## Dose type: non-steady-state
+## No. of population stratification level: 0
+</code></pre>
+
+<h2></h2>
+
+<table><thead>
+<tr>
+<th align="center">Dose (M)</th>
+<th align="center">No. of individuals</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center">NA</td>
+<td align="center">12</td>
+</tr>
+</tbody></table>
+
+<hr/>
+
+<h2></h2>
+
+<h2>Command-line arguments passed to ncappc function</h2>
+
+<pre><code>## ncappc(obsFile = &quot;Theoph.csv&quot;, psnOut = FALSE, method = &quot;linear-log&quot;, 
+##     evid = FALSE, noPlot = TRUE, printOut = TRUE)
+</code></pre>
+
+<hr/>
+
+<h2></h2>
+
+<h2>Description of the tabular output</h2>
+
+<p><strong>Table 1 (ncaOutput.tsv).</strong> The <strong><em>ncappc</em></strong> functionality produces this table to report the estimated values of the NCA metrics described in the documentation for each individual along with other stratifiers (eg. population group ID, dose ID, etc.) if specified in the input command. The extension &ldquo;tsv&rdquo; stands for &ldquo;tab separated variable&rdquo;, <em>i.e.</em>, the columns in this table are separated by tabs. &ldquo;NaN&rdquo; or &ldquo;NA&rdquo; is produced for the NCA metrics which are irrelevant for the specified data type. Below is an excerpt of selected columns of top 100 rows.</p>
+
+<h1>Table 1. ncaOutput.tsv (selected columns of top 100 rows)</h1>
+
+<!-- html table generated in R 3.3.2 by xtable 1.8-2 package -->
+
+<!-- Thu Jan 26 16:56:31 2017 -->
+
+<table border=1>
+<tr> <th> ID </th> <th> Dose
+(M) </th> <th> AUClast
+(T*M.L^-3) </th> <th> Cmax
+(M.L^-3) </th> <th> Tmax
+(T) </th> <th> AUCINF_obs
+(T*M.L^-3) </th> <th> Vz_obs
+(M/M.L^-3) </th> <th> Cl_obs
+(M/(T*M.L^-3)) </th> <th> HL_Lambda_z
+(T) </th>  </tr>
+  <tr> <td align="center"> 1 </td> <td align="center"> NA </td> <td align="center"> 147.2347 </td> <td align="center"> 10.5000 </td> <td align="center"> 1.1200 </td> <td align="center"> 214.9236 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center"> 14.3044 </td> </tr>
+  <tr> <td align="center"> 2 </td> <td align="center"> NA </td> <td align="center">  88.7313 </td> <td align="center">  8.3300 </td> <td align="center"> 1.9200 </td> <td align="center">  97.3779 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  6.6593 </td> </tr>
+  <tr> <td align="center"> 3 </td> <td align="center"> NA </td> <td align="center">  95.8782 </td> <td align="center">  8.2000 </td> <td align="center"> 1.0200 </td> <td align="center"> 106.1277 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  6.7661 </td> </tr>
+  <tr> <td align="center"> 4 </td> <td align="center"> NA </td> <td align="center"> 102.6336 </td> <td align="center">  8.6000 </td> <td align="center"> 1.0700 </td> <td align="center"> 114.2162 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  6.9812 </td> </tr>
+  <tr> <td align="center"> 5 </td> <td align="center"> NA </td> <td align="center"> 118.1794 </td> <td align="center"> 11.4000 </td> <td align="center"> 1.0000 </td> <td align="center"> 136.3047 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  8.0023 </td> </tr>
+  <tr> <td align="center"> 6 </td> <td align="center"> NA </td> <td align="center">  71.6970 </td> <td align="center">  6.4400 </td> <td align="center"> 1.1500 </td> <td align="center">  82.1759 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  7.8950 </td> </tr>
+  <tr> <td align="center"> 7 </td> <td align="center"> NA </td> <td align="center">  87.9692 </td> <td align="center">  7.0900 </td> <td align="center"> 3.4800 </td> <td align="center"> 100.9876 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  7.8467 </td> </tr>
+  <tr> <td align="center"> 8 </td> <td align="center"> NA </td> <td align="center">  86.8066 </td> <td align="center">  7.5600 </td> <td align="center"> 2.0200 </td> <td align="center"> 102.1533 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  8.5100 </td> </tr>
+  <tr> <td align="center"> 9 </td> <td align="center"> NA </td> <td align="center">  83.9374 </td> <td align="center">  9.0300 </td> <td align="center"> 0.6300 </td> <td align="center">  97.5200 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  8.4060 </td> </tr>
+  <tr> <td align="center"> 10 </td> <td align="center"> NA </td> <td align="center"> 135.5761 </td> <td align="center"> 10.2100 </td> <td align="center"> 3.5500 </td> <td align="center"> 167.8600 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  9.2469 </td> </tr>
+  <tr> <td align="center"> 11 </td> <td align="center"> NA </td> <td align="center">  77.8935 </td> <td align="center">  8.0000 </td> <td align="center"> 0.9800 </td> <td align="center">  86.9026 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  7.2612 </td> </tr>
+  <tr> <td align="center"> 12 </td> <td align="center"> NA </td> <td align="center"> 115.2202 </td> <td align="center">  9.7500 </td> <td align="center"> 3.5200 </td> <td align="center"> 125.8315 </td> <td align="center"> NA </td> <td align="center"> NA </td> <td align="center">  6.2865 </td> </tr>
+   </table>
+
+<p><strong>Table 2 (Obs_Stat.tsv).</strong> A set of statistical parameters calculated for the entire population or the stratified population for the following NCA metrics estimated from the observed data: Tmax, Cmax, AUClast, AUClower_upper, AUCINF_obs, AUC_pExtrap_obs, AUCINF_pred, AUC_pExtrap_pred, AUMClast, AUMCINF_obs, AUMC_pExtrap_obs, AUMCINF_pred, AUMC_pExtrap_pred, HL_Lambda_z, Rsq, Rsq_adjusted, No_points_Lambda_z obtained from the observed data. Brief description of the calculated statistical parameters: <strong>Ntot</strong> = Total number of data points, <strong>Nunique</strong> = number of unique data points, <strong>Min</strong> = minimum value, <strong>Max</strong> = maximum value, <strong>Mean</strong> = mean/average value, <strong>SD</strong> = standard deviation, <strong>SE</strong> = standard error, <strong>CVp</strong> = coefficient of variation %, <strong>a95CIu</strong> = upper limit of 95% arithmetic confidence interval, <strong>a95CIl</strong> = lower limit of 95% arithmetic confidence interval, <strong>gMean</strong> = geometric mean, <strong>gCVp</strong> = geometric coefficient of variation %.</p>
+
+<h2></h2>
+
+<hr/>
+
+<h2>Description of the graphical output</h2>
+
+<pre><code>## [1] &quot;No concentration vs time plot is available.&quot;
+</code></pre>
+
+<p><strong>Figure 1.</strong> [Individual level] Concentration vs time profile for each individual stratified by dose or population group, if any, as obtained from the observed data. The left panels represent the raw data, while the right panels represent the semi-logarithmic form of the concentration data. Each of the lines represents individual data.</p>
+
+<h2></h2>
+
+<pre><code>## [1] &quot;No histogram is available as the number of individuals is less than 5 in each population strata!&quot;
+</code></pre>
+
+<p><strong>Figure 2.</strong> [Population level] Histogram of four selected NCA metrics (AUClast, AUCINF_obs, Cmax, Tmax) estimated from the observed data. The solid blue vertical and dotted lines represent the population mean and the &ldquo;spread&rdquo; of the data. The &ldquo;spread&rdquo; is defined by 95% nonparametric prediction interval of the NCA metrics obtained from the observed data.</p>
+
+<h2></h2>
+
+<p>[*] Created and maintained by:</p>
+
+<h3>Chayan Acharya, Andrew C. Hooker, Siv Jonsson, Mats O. Karlsson</h3>
+
+<h3><em>Department of Pharmaceutical Biosciences</em></h3>
+
+<h3><em>Uppsala University, Sweden</em></h3>
+
+</body>
+
+</html>

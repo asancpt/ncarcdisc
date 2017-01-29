@@ -1,21 +1,3 @@
-# Details
-
-
-## In this chapter
-
-We will give you details of each software and perform NCA with a dataset `Theoph`. In the end, we will compare C~max~ and AUC~inf~ calculated by each software or package.
-
-## ncar
-
-```{r}
-library(ncar)
-
-NCA(Theoph, "Subject", "Time", "conc", Dose=320)
-iAUC = data.frame(Name=c("AUC[0-12h]","AUC[0-24h]"), Start=c(0,0), End=c(12,24)) ; iAUC
-NCA(Theoph, "Subject", "Time", "conc", Dose=320, iAUC=iAUC)
-```
-
-## PKNCA
 
 Automation of Noncompartmental Analysis in R 
 
@@ -40,9 +22,9 @@ install_github("billdenney/pknca")
     * CDISC SDTM pharmacokinetic concentration (PC) and pharmacokinetic parameter (PP) domains have been standardized 
 * 우리도 R로 NCA?
     
-### 할수 있는 것
-
-* Organizes concentration/time and dose/time data
+    ### 할수 있는 것
+    
+    * Organizes concentration/time and dose/time data
 * Predicts what you most likely need from NCA parameters from the concentration and dosing data.
 * Allows user control of all NCA parameter and summary calculations
 * Calculates all (standard) NCA parameters (Targeting the SDTM PK 파라메터)
@@ -84,73 +66,3 @@ install_github("billdenney/pknca")
 
 ### 결론
 * 써보고 feedback주고 contribute해라.
-
-
-```{r setup, echo=FALSE, include=FALSE}
-library(PKNCA)
-library(knitr)
-```
-
-```{r showtheoph}
-## It is always a good idea to look at the data
-knitr::kable(head(datasets::Theoph))
-```
-
-```{r setupconcdose}
-## By default it is groupedData; convert it to a data frame for use
-my.conc <- PKNCAconc(as.data.frame(datasets::Theoph), conc~Time|Subject)
-
-## Dosing data needs to only have one row per dose, so subset for
-## that first.
-d.dose <- unique(datasets::Theoph[datasets::Theoph$Time == 0,
-                                  c("Dose", "Time", "Subject")])
-knitr::kable(d.dose,
-             caption="Example dosing data extracted from theophylline data set")
-my.dose <- PKNCAdose(d.dose, Dose~Time|Subject)
-```
-
-```{r autointervals}
-my.data.automatic <- PKNCAdata(my.conc, my.dose)
-knitr::kable(PKNCA.options("single.dose.aucs"))
-knitr::kable(my.data.automatic$intervals)
-```
-
-```{r manualintervals}
-my.intervals <- data.frame(start=0,
-                           end=Inf,
-                           cmax=TRUE,
-                           tmax=TRUE,
-                           aucinf.obs=TRUE,
-                           auclast=TRUE)
-my.data.manual <- PKNCAdata(my.conc, my.dose,
-                            intervals=my.intervals)
-knitr::kable(my.data.manual$intervals)
-```
-
-```{r calculationauto}
-my.results.automatic <- pk.nca(my.data.automatic)
-knitr::kable(head(my.results.automatic$result))
-```
-```{r calculationautoshow, eval=FALSE}
-summary(my.results.automatic)
-```
-```{r calculationautoshowpretty, echo=FALSE}
-## Make a pretty table instead of the data.frame preformatted printout
-knitr::kable(summary(my.results.automatic))
-```
-
-```{r calculationmanual}
-my.results.manual <- pk.nca(my.data.manual)
-knitr::kable(head(my.results.manual$result))
-```
-```{r calculationmanualshow, eval=FALSE}
-summary(my.results.manual)
-```
-```{r calculationmanualshowpretty, echo=FALSE}
-## Make a pretty table instead of the data.frame preformatted printout
-knitr::kable(summary(my.results.manual))
-```
-
-## Summary
-
-`ncar` is good.

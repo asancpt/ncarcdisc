@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="comparison-of-noncompartmental-analysis-software.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="details.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -161,102 +161,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="details" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Details</h1>
-<div id="in-this-chapter-2" class="section level2">
-<h2><span class="header-section-number">4.1</span> In this chapter</h2>
-<p>We will give you details of each software and perform NCA with a dataset <code>Theoph</code>. In the end, we will compare C<sub>max</sub> and AUC<sub>inf</sub> calculated by each software or package.</p>
-</div>
-<div id="ncar" class="section level2">
-<h2><span class="header-section-number">4.2</span> ncar</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&quot;ncar&quot;)</span>
-<span class="kw">library</span>(ncar)
-<span class="kw">NCA</span>(Theoph, <span class="st">&quot;Subject&quot;</span>, <span class="st">&quot;Time&quot;</span>, <span class="st">&quot;conc&quot;</span>, <span class="dt">Dose=</span><span class="dv">320</span>, <span class="dt">Method =</span> <span class="st">&quot;Log&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(CMAX, AUCIFO)</code></pre></div>
-<pre><code>##     CMAX    AUCIFO
-## 1  10.50 214.92363
-## 2   8.33  97.37793
-## 3   8.20 106.12767
-## 4   8.60 114.21620
-## 5  11.40 136.30473
-## 6   6.44  82.17588
-## 7   7.09 100.98763
-## 8   7.56 102.15330
-## 9   9.03  97.52000
-## 10 10.21 167.86003
-## 11  8.00  86.90262
-## 12  9.75 125.83154</code></pre>
-</div>
-<div id="pknca" class="section level2">
-<h2><span class="header-section-number">4.3</span> PKNCA</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(PKNCA)
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
 
-my.conc &lt;-<span class="st"> </span><span class="kw">PKNCAconc</span>(<span class="kw">as.data.frame</span>(Theoph), conc~Time|Subject)
-d.dose &lt;-<span class="st"> </span><span class="kw">unique</span>(datasets::Theoph[datasets::Theoph$Time ==<span class="st"> </span><span class="dv">0</span>,
-                                  <span class="kw">c</span>(<span class="st">&quot;Dose&quot;</span>, <span class="st">&quot;Time&quot;</span>, <span class="st">&quot;Subject&quot;</span>)])
-my.dose &lt;-<span class="st"> </span><span class="kw">PKNCAdose</span>(d.dose, Dose~Time|Subject)
-my.data.automatic &lt;-<span class="st"> </span><span class="kw">PKNCAdata</span>(my.conc, my.dose)
-my.results.automatic &lt;-<span class="st"> </span><span class="kw">pk.nca</span>(my.data.automatic)
-my.results.automatic$result %&gt;%<span class="st"> </span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="dt">pattern =</span> <span class="st">&quot;cmax|aucinf&quot;</span>, PPTESTCD)) %&gt;%<span class="st"> </span>
-<span class="st">    </span><span class="kw">arrange</span>(PPTESTCD)</code></pre></div>
-<pre><code>##    start end Subject PPTESTCD   PPORRES
-## 1      0 Inf       1     cmax  10.50000
-## 2      0 Inf       2     cmax   8.33000
-## 3      0 Inf       3     cmax   8.20000
-## 4      0 Inf       4     cmax   8.60000
-## 5      0 Inf       5     cmax  11.40000
-## 6      0 Inf       6     cmax   6.44000
-## 7      0 Inf       7     cmax   7.09000
-## 8      0 Inf       8     cmax   7.56000
-## 9      0 Inf       9     cmax   9.03000
-## 10     0 Inf      10     cmax  10.21000
-## 11     0 Inf      11     cmax   8.00000
-## 12     0 Inf      12     cmax   9.75000
-## 13     0 Inf       1   aucinf 214.92363
-## 14     0 Inf       2   aucinf  97.37793
-## 15     0 Inf       3   aucinf 106.12767
-## 16     0 Inf       4   aucinf 114.21620
-## 17     0 Inf       5   aucinf 136.30473
-## 18     0 Inf       6   aucinf  82.17588
-## 19     0 Inf       7   aucinf 100.98763
-## 20     0 Inf       8   aucinf 102.15330
-## 21     0 Inf       9   aucinf  97.52000
-## 22     0 Inf      10   aucinf 167.86003
-## 23     0 Inf      11   aucinf  86.90262
-## 24     0 Inf      12   aucinf 125.83154</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(my.results.automatic)</code></pre></div>
-<pre><code>##   start end     auclast        cmax               tmax   half.life
-## 1     0  24 74.6 [24.3]           .                  .           .
-## 2     0 Inf           . 8.65 [17.0] 1.14 [0.630, 3.55] 8.18 [2.12]
-##       aucinf
-## 1          .
-## 2 115 [28.4]</code></pre>
+<div id="refs" class="references">
+<div>
+<p>1. Bae K-S, Han S (2017) Ncar: Noncompartmental analysis of pharmacokinetic data for cdisc standardized parameters. </p>
 </div>
-<div id="ncappc" class="section level2">
-<h2><span class="header-section-number">4.4</span> ncappc</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.csv</span>(Theoph %&gt;%<span class="st"> </span><span class="kw">rename</span>(<span class="dt">ID =</span> Subject, <span class="dt">TIME =</span> Time, <span class="dt">DV =</span> conc), 
-          <span class="st">&quot;Theoph.csv&quot;</span>, <span class="dt">row.names =</span> <span class="ot">FALSE</span>)
-<span class="kw">ncappc</span>(<span class="dt">obsFile=</span><span class="st">&quot;Theoph.csv&quot;</span>, <span class="dt">psnOut =</span> <span class="ot">FALSE</span>, <span class="dt">noPlot =</span> <span class="ot">TRUE</span>, <span class="dt">printOut =</span> <span class="ot">TRUE</span>, 
-       <span class="dt">method =</span> <span class="st">&quot;linear-log&quot;</span>, <span class="dt">evid =</span> <span class="ot">FALSE</span>)
-Theoph_ncappc &lt;-<span class="st"> </span><span class="kw">read.delim</span>(<span class="st">&quot;ncaOutput-.tsv&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">check.names =</span> <span class="ot">FALSE</span>)
-Theoph_ncappc[ , <span class="kw">c</span>(<span class="st">&quot;Cmax (M.L^-3)&quot;</span>, <span class="st">&quot;AUCINF_obs (T*M.L^-3)&quot;</span>)]</code></pre></div>
-<pre><code>##    Cmax (M.L^-3) AUCINF_obs (T*M.L^-3)
-## 1          10.50              216.6119
-## 2           8.33              100.1735
-## 3           8.20              109.5360
-## 4           8.60              118.3789
-## 5          11.40              139.4198
-## 6           6.44               84.2544
-## 7           7.09              103.7718
-## 8           7.56              103.9067
-## 9           9.03               99.9087
-## 10         10.21              170.6521
-## 11          8.00               89.1027
-## 12          9.75              130.5888</code></pre>
+<div>
+<p>2. Acharya C, Hooker AC, Türkyılmaz GY, Jönsson S, Karlsson MO (2016) A diagnostic tool for population models using non-compartmental analysis: The ncappc package for r. Computer Methods and Programs in Biomedicine 127:83–93</p>
 </div>
-<div id="summary-1" class="section level2">
-<h2><span class="header-section-number">4.5</span> Summary</h2>
-<p><code>ncar</code> is good.</p>
-
 </div>
 </div>
             </section>
@@ -264,8 +178,8 @@ Theoph_ncappc[ , <span class="kw">c</span>(<span class="st">&quot;Cmax (M.L^-3)&
           </div>
         </div>
       </div>
-<a href="comparison-of-noncompartmental-analysis-software.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="details.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -294,7 +208,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/asancpt/ncar/edit/master/bookdown/30-Details.Rmd",
+"link": "https://github.com/asancpt/ncar/edit/master/bookdown/90-References.Rmd",
 "text": "Edit"
 },
 "download": ["bookdown.pdf", "bookdown.epub", "bookdown.mobi"],

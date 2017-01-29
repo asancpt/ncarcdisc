@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Summary of the data set and the results}{1}{section.1}
+\contentsline {paragraph}{}{1}{section*.2}
+\contentsline {paragraph}{}{1}{section*.3}
+\contentsline {section}{\numberline {2}Command-line arguments passed to ncappc function}{1}{section.2}
+\contentsline {section}{\numberline {3}Description of the tabular output}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}Table 1 (ncaOutput.tsv)}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Table 2 (Obs\_Stat.tsv)}{2}{subsection.3.2}
+\contentsline {section}{\numberline {4}Description of the graphical output}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Figure 1. [Individual level] Concentration \textit {vs.} time profile}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Figure 2. [Population level] Histogram of the selected NCA metrics estimated from the observed data}{4}{subsection.4.2}

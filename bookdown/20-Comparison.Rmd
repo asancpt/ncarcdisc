@@ -1,13 +1,8 @@
 # Comparison of Noncompartmental analysis software
 
-```{r}
-
-```
-
 ## In this chapter
 
 We will briefly compare NCA softwares.
-
 
 ## Certara Phoenix WinNonLin
 
@@ -66,7 +61,7 @@ Extension of NonCompart for CDISC input
 
 ## R package: ncappc
 
-NCA Calculation and Population PK Model Diagnosis
+NCA Calculation and Population PK Model Diagnosis [@Acharya201683]
 
 <https://cran.r-project.org/web/packages/ncappc/index.html>
 <https://www.ncbi.nlm.nih.gov/pubmed/27000291>
