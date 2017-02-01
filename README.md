@@ -1,7 +1,7 @@
 # ncar: Noncompartmental Analysis of Pharmacokinetic Data for CDISC Standardized Parameters 
 
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/ncar)](https://cran.r-project.org/package=ncar) 
-[![Rdoc](http://www.rdocumentation.org/badges/version/ncar)](http://www.rdocumentation.org/packages/ncar)
+[![Rdoc](http://staging.rdocumentation.org/badges/version/ncar)](http://rdocumentation.org/packages/ncar)
 [![CRAN Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/ncar)](https://cran.r-project.org/package=ncar) 
 [![CRAN Monthly Downloads](http://cranlogs.r-pkg.org/badges/ncar)](https://cran.r-project.org/package=ncar) 
 [![Travis-CI Build Status](https://travis-ci.org/asancpt/ncar.svg?branch=master)](https://travis-ci.org/asancpt/ncar) 
