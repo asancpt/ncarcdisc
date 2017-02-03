@@ -71,8 +71,8 @@ runCDISC <- function(wd = getwd(), filenameDM = "DM", filenameEX = "EX", filenam
         filter(USUBJID %in% FocusSubj) %>%
         filter(PCSPEC == "PLASMA") %>%
         left_join(DosingData, by = "USUBJID") %>%
-        mutate(ACTUALHR = as.numeric(difftime(ymd_hm(PCDTC, tz = "Asia/Seoul"),
-                                              ymd_hm(EXSTDTC, tz = "Asia/Seoul"),
+        mutate(ACTUALHR = as.numeric(difftime(ymd_hm(PCDTC),
+                                              ymd_hm(EXSTDTC),
                                               units = "hours"))) %>%
         filter(!is.na(ACTUALHR)) %>%
         mutate(ACTUALHR = ifelse(ACTUALHR < 0, yes = 0, no = ACTUALHR)) %>%
