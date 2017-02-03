@@ -14,11 +14,13 @@
 #' @importFrom lubridate ymd_hm
 #' @importFrom utils packageDescription
 #' @importFrom utils packageVersion
+#' @importFrom tidyr gather
 #' @import dplyr
 #' @export
 #' @return List of output data of noncompartmental analysis
 #' @examples
 #' #Currently there is no publicly open CDISC dataset for presenting an example.
+
 runCDISC <- function(wd = getwd(), filenameDM = "DM", filenameEX = "EX", filenamePC = "PC",
                      extension = "xpt", incl_arm = NULL){
 
@@ -37,6 +39,14 @@ runCDISC <- function(wd = getwd(), filenameDM = "DM", filenameEX = "EX", filenam
     PCSTRESN <- NULL
     PCSTRESU <- NULL
     USUBJID <- NULL
+
+    PPTESTCD <- NULL
+    PPORRES <- NULL
+    STUDYID <- NULL
+    DOMAIN <- NULL
+    PPSEQ <- NULL
+    PPTEST <- NULL
+    PPSCAT <- NULL
 
     # Actual function starts
     Output <- list()
@@ -90,6 +100,13 @@ runCDISC <- function(wd = getwd(), filenameDM = "DM", filenameEX = "EX", filenam
                             colTime = "ACTUALHR", colConc = "PCSTRESN",
                             Dose = Output$ActualTimePlasmaDose[, "EXDOSECONV"], AdmMode = "Infusion",
                             TimeInfusion = mean(Output$ActualTimePlasmaDose[, "INFUSIONHR"]))
+
+    Output$PP <- Output$ResultNCA %>% gather(PPTESTCD, PPORRES, 2:dim(Output$ResultNCA)[2]) %>%
+            left_join(Abbr, by = "PPTESTCD") %>%
+            arrange(USUBJID) %>%
+            mutate(STUDYID = unique(EX$STUDYID), PPSEQ = row_number(), DOMAIN = "PP",
+                   PPSCAT = "NON-COMPARTMENTAL") %>%
+            select(STUDYID, DOMAIN, USUBJID, PPSEQ, PPTESTCD, PPTEST, PPSCAT, PPORRES)
 
     return(Output)
 }

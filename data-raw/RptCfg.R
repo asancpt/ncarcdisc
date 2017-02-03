@@ -1,7 +1,8 @@
 RptCfg <- read.csv("data-raw/RptCfg.csv", as.is = TRUE)
+Abbr <- read.csv("data-raw/Abbr.csv", as.is = TRUE)
 
-# write.csv(RptCfg, "data-raw/RptCfg.csv", row.names = FALSE)
-
-# This RptCfg is need to be used externally and internally
+# These need to be used externally.
 devtools::use_data(RptCfg, overwrite = TRUE) # Used externally
-devtools::use_data(RptCfg, overwrite = TRUE, internal = TRUE) # Used internally
+
+# These need to be used internally.
+devtools::use_data(RptCfg, Abbr, overwrite = TRUE, internal = TRUE) # Used internally

@@ -8,3 +8,4 @@
 ^docs$
 ^cran-comments.md$
 ^appveyor\.yml$
+^tests\/SP-8203$

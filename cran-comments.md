@@ -4,7 +4,7 @@
 * R version 3.3.2
 * Travis-CI <https://travis-ci.org/asancpt/ncar>
 
-## R CMD check --as-cran ncar_0.3.tar.gz 
+## R CMD check --as-cran ncar_0.3.1.tar.gz 
 
 * using log directory ‘/Users/Sungpil/asancpt/ncar.Rcheck’
 * using R version 3.3.2 (2016-10-31)
