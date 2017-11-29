@@ -1,13 +1,6 @@
-# ncar: Noncompartmental Analysis of Pharmacokinetic Data for CDISC Standardized Parameters 
+# ncarcdisc: Noncompartmental Analysis of Pharmacokinetic Data for CDISC Standardized Parameters 
 
-[![CRAN Status Badge](http://www.r-pkg.org/badges/version/ncar)](https://cran.r-project.org/package=ncar) 
-[![Rdoc](http://staging.rdocumentation.org/badges/version/ncar)](http://rdocumentation.org/packages/ncar)
-[![CRAN Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/ncar)](https://cran.r-project.org/package=ncar) 
-[![CRAN Monthly Downloads](http://cranlogs.r-pkg.org/badges/ncar)](https://cran.r-project.org/package=ncar) 
-[![Travis-CI Build Status](https://travis-ci.org/asancpt/ncar.svg?branch=master)](https://travis-ci.org/asancpt/ncar) 
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/asancpt/ncar?branch=master&svg=true)](https://ci.appveyor.com/project/asancpt/ncar)
-
-> ncar R package (Branch of NonCompart v0.2.6 R package)
+> ncarcdisc R package (Branch of NonCompart v0.2.6 R package)
 
 Overview
 --------
