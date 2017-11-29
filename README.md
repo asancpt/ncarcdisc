@@ -36,7 +36,7 @@ Installation
 Contact
 -------
 
-- `ncar` Package developer: Kyun-Seop Bae <k@acr.kr>, Sungpil Han <shan@acp.kr>
+- `ncarcdisc` Package developer: Kyun-Seop Bae <k@acr.kr>, Sungpil Han <shan@acp.kr>
 - Copyright: 2017, Kyun-Seop Bae
 - License: GPL-3
 
